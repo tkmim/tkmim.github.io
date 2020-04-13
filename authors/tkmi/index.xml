@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tkmi Matsunobu</title>
+    <title>Takumi Matsunobu</title>
     <link>https://tkmim.github.io/authors/tkmi/</link>
       <atom:link href="https://tkmim.github.io/authors/tkmi/index.xml" rel="self" type="application/rss+xml" />
-    <description>Tkmi Matsunobu</description>
+    <description>Takumi Matsunobu</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Tkmi Matsunobu</title>
+      <title>Takumi Matsunobu</title>
       <link>https://tkmim.github.io/authors/tkmi/</link>
     </image>
     
