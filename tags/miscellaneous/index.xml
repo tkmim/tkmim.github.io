@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>miscellaneous on Takumi Matsunobu</title>
+    <link>http://localhost:8080/tags/miscellaneous/</link>
+    <description>Recent content in miscellaneous on Takumi Matsunobu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 06 Mar 2022 17:01:53 +0100</lastBuildDate><atom:link href="http://localhost:8080/tags/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Style_changelog</title>
+      <link>http://localhost:8080/post/style_changelog/</link>
+      <pubDate>Sun, 06 Mar 2022 17:01:53 +0100</pubDate>
+      
+      <guid>http://localhost:8080/post/style_changelog/</guid>
+      <description>元祖github-styleからの変更履歴 Publication への固定リンクをメニューに追加 (6 March 2022) ライトモード・ダークモードの切り替えトグルアイコンを現在の設</description>
+    </item>
+    
+  </channel>
+</rss>
