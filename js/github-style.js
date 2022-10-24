@@ -311,13 +311,13 @@ function relativeTime(dateStr) {
   if (hours < 24) {
     return `${hours} hours ago`;
   }
-  if (days < 30) {
+  if (days < 366) {
     return `${days} days ago`;
   }
-  if (date.getFullYear() === now.getFullYear()) {
-    return `${date.getDate()} ${months[date.getMonth()]}`;
-  }
-  return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+  // if (date.getFullYear() === now.getFullYear()) {
+  //   return `${date.getDate()} ${months[date.getMonth()]}`;
+  // }
+  return `${date.getDate()} ${monthsfull[date.getMonth()]} ${date.getFullYear()}`;
 }
 
 function setRelativeTime() {
