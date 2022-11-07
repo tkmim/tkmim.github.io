@@ -6,7 +6,16 @@
     <description>Recent content on Takumi Matsunobu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 06 Mar 2022 17:01:53 +0100</lastBuildDate><atom:link href="https://tkmim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Oct 2022 22:48:40 +0200</lastBuildDate><atom:link href="https://tkmim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://tkmim.github.io/post/test/</link>
+      <pubDate>Mon, 24 Oct 2022 22:48:40 +0200</pubDate>
+      
+      <guid>https://tkmim.github.io/post/test/</guid>
+      <description>1. はじめに xxxx x. Markdown CheetSheet Text Format Italic（斜体） Italic（斜体） Emphasis（強調） Emphasis（強調） Strikethrough（取</description>
+    </item>
+    
     <item>
       <title>Style_changelog</title>
       <link>https://tkmim.github.io/post/style_changelog/</link>
@@ -17,14 +26,13 @@
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>https://tkmim.github.io/publication/</link>
+      <title>Publication</title>
+      <link>https://tkmim.github.io/post/publication/</link>
       <pubDate>Mon, 28 Feb 2022 13:38:14 +0100</pubDate>
       
-      <guid>https://tkmim.github.io/publication/</guid>
-      <description>Preparation/Submitted   Matsunobu, T., A. Zarboo, C. Barthlott, and C. Keil (2022) Impact of combined microphysical uncertainties on convective clouds and precipitation in ICON-D2-EPS forecasts during different synoptic control, Weather Clim. Dynam., https://doi.org/10.5194/wcd-2022-17, accepted.
-  Matsunobu, T., J. F. Quinting, C. M. Grams, and M. Matsueda (2022) Impact of East-Asian weather patterns on regional extreme precipitation events in Japan. In preparation.
-  Published   Barthlott, C., A.</description>
+      <guid>https://tkmim.github.io/post/publication/</guid>
+      <description>Preparation/Submitted Matsunobu, T., Quinting, J. F., Grams, C. M., and Matsueda M. (2022) Impact of East-Asian weather patterns on regional extreme precipitation events in Japan. In preparation. Peer-reviewed articles Matsunobu, T., Keil, C., and Barthlott, C. (2022) The impact of microphysical uncertainty conditional on initial and boundary condition uncertainty under varying synoptic control, Weather Clim. Dynam., 3(4), 1273–1289. https://doi.org/10.5194/wcd-3-1273-2022
+Barthlott, C., Zarboo, A., Matsunobu, T., and Keil, C. (2022) Impacts of combined microphysical and land-surface uncertainties on convective clouds and precipitation in different weather regimes.</description>
     </item>
     
     <item>
