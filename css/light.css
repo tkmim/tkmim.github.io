@@ -250,6 +250,26 @@
   --color-calendar-halloween-graph-day-L2-bg: #ffc501;
   --color-calendar-halloween-graph-day-L3-bg: #fe9600;
   --color-calendar-halloween-graph-day-L4-bg: #03001c;
+
+  --color-calendar-graph-day-Lm1-bg: #a5e7ff;
+  --color-calendar-graph-day-Lm1-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lm2-bg: #63a9f9;
+  --color-calendar-graph-day-Lm2-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lm3-bg: #006bbc;
+  --color-calendar-graph-day-Lm3-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lm4-bg: #003582;
+  --color-calendar-graph-day-Lm4-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp1-bg: #f0dfcf;
+  --color-calendar-graph-day-Lp1-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp2-bg: #f0ab9e;
+  --color-calendar-graph-day-Lp2-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp3-bg: #ef776f;
+  --color-calendar-graph-day-Lp3-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp4-bg: #ee4044;
+  --color-calendar-graph-day-Lp4-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-m-bg: #ababae;
+  --color-calendar-graph-day-m-border: rgba(27, 31, 35, 0.06);
+  
   --color-checks-donut-error: #cb2431;
   --color-checks-donut-neutral: #959da5;
   --color-checks-donut-pending: #dbab09;

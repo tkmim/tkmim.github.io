@@ -7,7 +7,7 @@
     <link rel="stylesheet" href='https://tkmim.github.io/css/frameworks.min.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/github.min.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/github-style.css' />
-    <link rel="stylesheet" href='https://tkmim.github.io/css/light.css' />
+    <link rel="stylesheet" href='/css/light.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/syntax.css' />
     <title>Style_changelog - Takumi Matsunobu</title>
@@ -75,30 +75,8 @@
       </a>
     </div>
   
-    <div class="Header-item d-md-none">
-      <button class="Header-link btn-link js-details-target" type="button"
-        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
-        
-      </button>
-    </div>
-    <div style="display: none;" id="header-search"
-      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
-      <div
-        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
-        <div class="position-relative">
-          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
-            autocomplete="off">
-            <label
-              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
-              <input type="text"
-                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
-                name="q" value="" placeholder="Search" autocomplete="off">
-              <input type="hidden" name="q" value="site:https://tkmim.github.io/">
-            </label>
-          </form>
-        </div>
-      </div>
-    </div>
+    
+    
 
     <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
       <a class="Header-link " href="https://tkmim.github.io/">
@@ -153,9 +131,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 24 Oct 2022 22:49:58 &#43;0200"
+                  Modified <relative-time datetime="Wed, 23 Aug 2023 16:06:35 &#43;0200"
                     class="no-wrap">
-                    Mon, 24 Oct 2022 22:49:58 &#43;0200</relative-time>
+                    Wed, 23 Aug 2023 16:06:35 &#43;0200</relative-time>
                   
                 </div>
               </div>
@@ -179,7 +157,7 @@
                         <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
                       </svg>
                     </summary>
-                          339 Words
+                          769 Words
                     
 
                   </div>
@@ -249,6 +227,118 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// }
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDate</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">monthsfull</span>[<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getMonth</span>()]<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getFullYear</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
 </span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Githubの草を投稿履歴ではなくいい感じのランダム生成タイルに (23 Aug 2023)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js:github-style.js" data-lang="js:github-style.js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">graph2</span>(<span style="color:#a6e22e">year</span>, <span style="color:#a6e22e">posts</span>, <span style="color:#a6e22e">startDate</span>, <span style="color:#a6e22e">endDate</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">``</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// iterate over every post and put the date as a key into &#34;count&#34; dictionary
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">monthPos</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">startMonth</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">weekday</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">startDate</span>.<span style="color:#a6e22e">getDay</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">53</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) { <span style="color:#75715e">// week
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">html</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`&lt;g transform=&#34;translate(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, 0)&#34;&gt;`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// loop over each of day in a week
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">7</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) { <span style="color:#75715e">// days
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">startDate</span>.<span style="color:#a6e22e">getTime</span>() <span style="color:#f92672">+</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">weekday</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dataDate</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getFullYear</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">-</span><span style="color:#e6db74">${</span>(<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getMonth</span>() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">padStart</span>(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;0&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">-</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDate</span>().<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">padStart</span>(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;0&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">date</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">startDate</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">date</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">endDate</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">j</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">51</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">startMonth</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getMonth</span>()) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">monthPos</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">i</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">startMonth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getMonth</span>();
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">round</span>((Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">color</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">c</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lm1-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lm2-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lm3-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-m-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lp1-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lp2-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lp3-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lm4-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;var(--color-calendar-graph-day-Lp4-bg)&#34;</span>;
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">html</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`&lt;rect class=&#34;day&#34; width=&#34;11&#34; height=&#34;11&#34; x=&#34;</span><span style="color:#e6db74">${</span><span style="color:#ae81ff">16</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">i</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; y=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">j</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">15</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      fill=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">color</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; onmouseover=&#34;svgTip(this, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">c</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, &#39;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">dataDate</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;)&#34; onmouseleave=&#34;hideTip()&#34;&gt;&lt;/rect&gt;`</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">html</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;&lt;/g&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">monthPos</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> <span style="color:#a6e22e">monthPos</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">monthPos</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">monthPos</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">month</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">monthPos</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">month</span> <span style="color:#f92672">===</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">html</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`&lt;text x=&#34;</span><span style="color:#e6db74">${</span><span style="color:#ae81ff">15</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">month</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">16</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; y=&#34;-9&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    class=&#34;month&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">months</span>[(<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">startDate</span>.<span style="color:#a6e22e">getMonth</span>()) <span style="color:#f92672">%</span> <span style="color:#ae81ff">12</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/text&gt;`</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">html</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;8&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">style=&#34;display: none;&#34;&gt;Sun&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;25&#34;&gt;Mon&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;32&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">style=&#34;display: none;&#34;&gt;Tue&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;56&#34;&gt;Wed&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;57&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">style=&#34;display: none;&#34;&gt;Thu&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;85&#34;&gt;Fri&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;text text-anchor=&#34;start&#34; class=&#34;wday&#34; dx=&#34;-10&#34; dy=&#34;81&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">style=&#34;display: none;&#34;&gt;Sat&lt;/text&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#graph-svg&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">html</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css:light.css" data-lang="css:light.css"><span style="display:flex;"><span><span style="color:#f92672">--color-calendar-graph-day-Lm1-bg</span><span style="color:#f92672">:</span> #a5e7ff<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm1-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm2-bg</span><span style="color:#f92672">:</span> #63a9f9<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm2-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm3-bg</span><span style="color:#f92672">:</span> #006bbc<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm3-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm4-bg</span><span style="color:#f92672">:</span> #003582<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lm4-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp1-bg</span><span style="color:#f92672">:</span> #f0dfcf<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp1-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp2-bg</span><span style="color:#f92672">:</span> #f0ab9e<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp2-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp3-bg</span><span style="color:#f92672">:</span> #ef776f<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp3-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp4-bg</span><span style="color:#f92672">:</span> #ee4044<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-Lp4-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-m-bg</span><span style="color:#f92672">:</span> #ababae<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--color-calendar-graph-day-m-border</span><span style="color:#f92672">:</span> <span style="color:#f92672">rgba</span><span style="color:#f92672">(</span><span style="color:#f92672">27</span><span style="color:#f92672">,</span> <span style="color:#f92672">31</span><span style="color:#f92672">,</span> <span style="color:#f92672">35</span><span style="color:#f92672">,</span> <span style="color:#f92672">0</span>.<span style="color:#a6e22e">06</span><span style="color:#f92672">);</span>
 </span></span></code></pre></div></article>
               </div>
             </div>
@@ -347,7 +437,7 @@
 </div>
 </body>
 
-<script type="application/javascript" src="https://tkmim.github.io/js/github-style.js"></script>
+<script type="application/javascript" src="/js/github-style.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
   integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">

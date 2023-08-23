@@ -50,15 +50,15 @@ function switchYear(year) {
     }
   }
   posts.sort((a, b) => { return b - a });
-  document.querySelector('#posts-activity').innerHTML = '';
-  for (const time of ms) {
-    const node = document.createElement('div');
-    const array = time.split("-");
-    node.innerHTML = monthly(array[0], Number(array[1]), posts);
-    document.querySelector('#posts-activity').appendChild(node);
-  }
+  // document.querySelector('#posts-activity').innerHTML = '';
+  // for (const time of ms) {
+  //   const node = document.createElement('div');
+  //   const array = time.split("-");
+  //   node.innerHTML = monthly(array[0], Number(array[1]), posts);
+  //   document.querySelector('#posts-activity').appendChild(node);
+  // }
 
-  graph(year, posts, startDate, endDate);
+  graph2(year, posts, startDate, endDate);
 
   const yearList = document.querySelectorAll('.js-year-link');
   for (const elem of yearList) {
@@ -248,6 +248,99 @@ style="display: none;">Sat</text>
 `;
   document.querySelector('#graph-svg').innerHTML = html;
 }
+
+function graph2(year, posts, startDate, endDate) {
+  let html = ``;
+
+  // iterate over every post and put the date as a key into "count" dictionary
+  const count = {};
+  const monthPos = [];
+  let startMonth = -1;
+  const weekday = startDate.getDay();
+  for (let i = 0; i < 53; i++) { // week
+    html += `<g transform="translate(${i * 16}, 0)">`;
+
+    // loop over each of day in a week
+    for (let j = 0; j < 7; j++) { // days
+      const date = new Date(startDate.getTime() + (i * 7 + j - weekday) * 24 * 60 * 60 * 1000);
+      const dataDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
+      if (date < startDate || date > endDate) {
+        continue;
+      }
+
+      if (j === 0) {
+        if (i <= 51) {
+          if (startMonth !== date.getMonth()) {
+            monthPos.push(i);
+            startMonth = date.getMonth();
+          }
+        }
+      }
+
+      let c;
+      c = Math.round((Math.random() - 0.5)*10);
+      let color;
+      switch (c) {
+        case -1:
+          color = "var(--color-calendar-graph-day-Lm1-bg)";
+          break;
+        case -2:
+          color = "var(--color-calendar-graph-day-Lm2-bg)";
+          break;
+        case -3:
+          color = "var(--color-calendar-graph-day-Lm3-bg)";
+          break;
+        case 0:
+          color = "var(--color-calendar-graph-day-m-bg)";
+          break;
+        case 1:
+          color = "var(--color-calendar-graph-day-Lp1-bg)";
+          break;
+        case 2:
+          color = "var(--color-calendar-graph-day-Lp2-bg)";
+          break;
+        case 3:
+          color = "var(--color-calendar-graph-day-Lp3-bg)";
+          break;
+        default:
+          if (c < 0) {
+          color = "var(--color-calendar-graph-day-Lm4-bg)";
+          }else{
+          color = "var(--color-calendar-graph-day-Lp4-bg)";
+          }
+      }
+      html += `<rect class="day" width="11" height="11" x="${16 - i}" y="${j * 15}"
+      fill="${color}" onmouseover="svgTip(this, ${c}, '${dataDate}')" onmouseleave="hideTip()"></rect>`;
+    }
+    html += '</g>';
+  }
+  if (monthPos[1] - monthPos[0] < 2) {
+    monthPos[0] = -1;
+  }
+  for (let i = 0; i < monthPos.length; i++) {
+    const month = monthPos[i];
+    if (month === -1) {
+      continue;
+    }
+    html += `<text x="${15 * month + 16}" y="-9"
+    class="month">${months[(i + startDate.getMonth()) % 12]}</text>`;
+  }
+  html += `
+<text text-anchor="start" class="wday" dx="-10" dy="8"
+style="display: none;">Sun</text>
+<text text-anchor="start" class="wday" dx="-10" dy="25">Mon</text>
+<text text-anchor="start" class="wday" dx="-10" dy="32"
+style="display: none;">Tue</text>
+<text text-anchor="start" class="wday" dx="-10" dy="56">Wed</text>
+<text text-anchor="start" class="wday" dx="-10" dy="57"
+style="display: none;">Thu</text>
+<text text-anchor="start" class="wday" dx="-10" dy="85">Fri</text>
+<text text-anchor="start" class="wday" dx="-10" dy="81"
+style="display: none;">Sat</text>
+`;
+  document.querySelector('#graph-svg').innerHTML = html;
+}
+
 
 let svgElem = document.createElement('div');
 svgElem.style.cssText = 'pointer-events: none; display: none;';

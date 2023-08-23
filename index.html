@@ -8,7 +8,7 @@
     <link rel="stylesheet" href='https://tkmim.github.io/css/frameworks.min.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/github.min.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/github-style.css' />
-    <link rel="stylesheet" href='https://tkmim.github.io/css/light.css' />
+    <link rel="stylesheet" href='/css/light.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/syntax.css' />
     <title>Takumi Matsunobu</title>
@@ -76,30 +76,8 @@
       </a>
     </div>
   
-    <div class="Header-item d-md-none">
-      <button class="Header-link btn-link js-details-target" type="button"
-        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
-        
-      </button>
-    </div>
-    <div style="display: none;" id="header-search"
-      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
-      <div
-        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
-        <div class="position-relative">
-          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
-            autocomplete="off">
-            <label
-              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
-              <input type="text"
-                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
-                name="q" value="" placeholder="Search" autocomplete="off">
-              <input type="hidden" name="q" value="site:https://tkmim.github.io/">
-            </label>
-          </form>
-        </div>
-      </div>
-    </div>
+    
+    
 
     <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
       <a class="Header-link " href="https://tkmim.github.io/">
@@ -384,132 +362,7 @@ integrity="sha384-l0/0sn63N3mskDgRYJZA6Mogihu0VY3CusdLMiwpJ9LFPklOARUcOiWEIGGmFE
       </div>
     </div>
     
-    <div class="mt-4">
-      <div class="js-pinned-items-reorder-container">
-        <h2 class="f4 mb-2 text-normal">
-          Popular posts
-        </h2>
-        <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
-          
-          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-            <div
-              class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
-              <div class="pinned-item-list-item-content">
-                <div class="d-flex width-full flex-items-center position-relative">
-                  <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 16 16" version="1.1"
-                    width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
-                    </path>
-                  </svg>
-                  <a class="text-bold flex-auto min-width-0" href="https://tkmim.github.io/post/test/">
-                    <span class="repo" title="Test">Test</span>
-                  </a>
-                </div>
-
-
-                <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
-                  1. はじめに xxxx x. Markdown CheetSheet Text Format Italic（斜体） Italic（斜体） Emphasis（強調） Emphasis（強調） Strikethrough（取
-                </div>
-
-                <p class="mb-0 f6 text-gray">
-                  
-                  
-                  <a href="/tags/" class="pinned-item-meta muted-link ">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                      <path fill-rule="evenodd"
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                      </path>
-                    </svg>
-                    
-                  </a>
-                  
-                  <a href="/tags/" class="pinned-item-meta muted-link ">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                      <path fill-rule="evenodd"
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                      </path>
-                    </svg>
-                    
-                  </a>
-                  
-                  
-                </p>
-              </div>
-            </div>
-          </li>
-          
-          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-            <div
-              class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
-              <div class="pinned-item-list-item-content">
-                <div class="d-flex width-full flex-items-center position-relative">
-                  <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 16 16" version="1.1"
-                    width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
-                    </path>
-                  </svg>
-                  <a class="text-bold flex-auto min-width-0" href="https://tkmim.github.io/post/style_changelog/">
-                    <span class="repo" title="Style_changelog">Style_changelog</span>
-                  </a>
-                </div>
-
-
-                <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
-                  元祖 github-style からの変更履歴 アイコンを日替わりの identicon に設定 (6 March 2022) Publication への固定リンクをメニューに追加 (layout/partials/menu.html) (6 March 2022) ライトモード・ダークモードの切り替えトグルアイ
-                </div>
-
-                <p class="mb-0 f6 text-gray">
-                  
-                  
-                  <a href="/tags/miscellaneous" class="pinned-item-meta muted-link ">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                      <path fill-rule="evenodd"
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                      </path>
-                    </svg>
-                    miscellaneous
-                  </a>
-                  
-                  
-                </p>
-              </div>
-            </div>
-          </li>
-          
-          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-            <div
-              class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
-              <div class="pinned-item-list-item-content">
-                <div class="d-flex width-full flex-items-center position-relative">
-                  <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 16 16" version="1.1"
-                    width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
-                    </path>
-                  </svg>
-                  <a class="text-bold flex-auto min-width-0" href="https://tkmim.github.io/post/publication/">
-                    <span class="repo" title="Publication">Publication</span>
-                  </a>
-                </div>
-
-
-                <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
-                  Preparation/Submitted Matsunobu, T., Puh, M., and Kei, C. (2023) Quantifying flow- and scale-dependent predictability of convective precipitation. under review
-Matsunobu, T., Quinting, J. F., Grams, C. M., and Matsueda, M. (2023) Impact of East-Asian weather patterns on regional extreme precipitation events in Japan. under review
-Peer-reviewed articles Matsunobu, T., Keil, C., and Barthlott, C. (2022) The impact of microphysical uncertainty conditional on initial and boundary condition uncertainty under varying synoptic control, Weather Clim.
-                </div>
-
-                <p class="mb-0 f6 text-gray">
-                  
-                </p>
-              </div>
-            </div>
-          </li>
-          
-        </ol>
-      </div>
+    
     </div>
 
     
@@ -550,11 +403,15 @@ Peer-reviewed articles Matsunobu, T., Keil, C., and Barthlott, C. (2022) The imp
               <div class="contrib-legend text-gray">
                 Less
                 <ul class="legend">
-                  <li style="background-color: var(--color-calendar-graph-day-bg)"></li>
-                  <li style="background-color: var(--color-calendar-graph-day-L1-bg)"></li>
-                  <li style="background-color: var(--color-calendar-graph-day-L2-bg)"></li>
-                  <li style="background-color: var(--color-calendar-graph-day-L3-bg)"></li>
-                  <li style="background-color: var(--color-calendar-graph-day-L4-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lm4-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lm3-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lm2-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lm1-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-m-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lp1-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lp2-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lp3-bg)"></li>
+                  <li style="background-color: var(--color-calendar-graph-day-Lp4-bg)"></li>
                 </ul>
                 More
               </div>
@@ -574,13 +431,9 @@ Peer-reviewed articles Matsunobu, T., Keil, C., and Barthlott, C. (2022) The imp
           </div>
         </div>
 
-        <h2 class="f4 text-normal mt-4 mb-3">
-          Post activity
-        </h2>
+        
 
-        <div id="posts-activity">
-        </div>
-      </div>
+        
 
     </div>
 
@@ -651,7 +504,7 @@ console.log('ge' + (nowTime.getMonth()+1) + nowTime.getDate())
 </div>
 </body>
 
-<script type="application/javascript" src="https://tkmim.github.io/js/github-style.js"></script>
+<script type="application/javascript" src="/js/github-style.js"></script>
 
 
 
