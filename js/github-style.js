@@ -138,19 +138,32 @@ function monthly(year, month, posts) {
 }
 
 function yearList() {
-  const years = [];
-  for (const item of contributions) {
-    const year = item.date.getFullYear();
-    if (!years.includes(year)) {
-      years.push(year);
-    }
-  }
+  // const years = [];
+  // for (const item of contributions) {
+  //   const year = item.date.getFullYear();
+  //   if (!years.includes(year)) {
+  //     years.push(year);
+  //   }
+  // }
+  const arrayRange = (start, stop, step) =>
+  Array.from(
+  { length: (stop - start - 1) / step + 1 },
+  (value, index) => start + index * step
+  );
+
+  const years = arrayRange(2001, 2023, 1);
   years.sort((a, b) => { return b - a });
 
   for (let i = 0; i < years.length; i++) {
     const year = years[i];
-    const node = document.createElement('li');
-    node.innerHTML = `<li><a class="js-year-link filter-item px-3 mb-2 py-2" onclick="switchYear('${year}')">${year}</a></li>`;
+    // const node = document.createElement('li');
+    // node.innerHTML = `<li><a class="js-year-link filter-item px-3 mb-2 py-2" onclick="switchYear('${year}')">${year}</a></li>`;
+    const node = document.createElement('span');
+    node.innerHTML = `<a class="js-year-link filter-item" style="display:inline-block; width:60px;" onclick="switchYear('${year}')">${year}</a>`;
+    if (year%10 == 1){
+      node.innerHTML += `<br>`;
+
+    }
     document.querySelector('#year-list').appendChild(node);
   }
 }
@@ -257,63 +270,86 @@ function graph2(year, posts, startDate, endDate) {
   const monthPos = [];
   let startMonth = -1;
   const weekday = startDate.getDay();
-  for (let i = 0; i < 53; i++) { // week
-    html += `<g transform="translate(${i * 16}, 0)">`;
 
-    // loop over each of day in a week
-    for (let j = 0; j < 7; j++) { // days
-      const date = new Date(startDate.getTime() + (i * 7 + j - weekday) * 24 * 60 * 60 * 1000);
-      const dataDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
-      if (date < startDate || date > endDate) {
-        continue;
-      }
+  function graph2loop(html, cvalues, startDate, endDate) {
 
-      if (j === 0) {
-        if (i <= 51) {
-          if (startMonth !== date.getMonth()) {
-            monthPos.push(i);
-            startMonth = date.getMonth();
+    let dayofyear = 0;
+    for (let i = 0; i < 53; i++) { // week
+      html += `<g transform="translate(${i * 16}, 0)">`;
+
+      // loop over each of day in a week
+      for (let j = 0; j < 7; j++) { // days
+        const date = new Date(startDate.getTime() + (i * 7 + j - weekday) * 24 * 60 * 60 * 1000);
+        const dataDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
+        console.log(date.getDate())
+        if (date < startDate || date > endDate || (date.getDate() == 29 && date.getMonth() == 1)) {
+          continue;
+        }
+
+        if (j === 0) {
+          if (i <= 51) {
+            if (startMonth !== date.getMonth()) {
+              monthPos.push(i);
+              startMonth = date.getMonth();
+            }
           }
         }
-      }
 
-      let c;
-      c = Math.round((Math.random() - 0.5)*10);
-      let color;
-      switch (c) {
-        case -1:
-          color = "var(--color-calendar-graph-day-Lm1-bg)";
-          break;
-        case -2:
-          color = "var(--color-calendar-graph-day-Lm2-bg)";
-          break;
-        case -3:
-          color = "var(--color-calendar-graph-day-Lm3-bg)";
-          break;
-        case 0:
-          color = "var(--color-calendar-graph-day-m-bg)";
-          break;
-        case 1:
-          color = "var(--color-calendar-graph-day-Lp1-bg)";
-          break;
-        case 2:
-          color = "var(--color-calendar-graph-day-Lp2-bg)";
-          break;
-        case 3:
-          color = "var(--color-calendar-graph-day-Lp3-bg)";
-          break;
-        default:
-          if (c < 0) {
-          color = "var(--color-calendar-graph-day-Lm4-bg)";
-          }else{
-          color = "var(--color-calendar-graph-day-Lp4-bg)";
-          }
+        let c;
+        // c = Math.round((Math.random() - 0.5)*10);
+        c = Math.round(cvalues[dayofyear]);
+        //console.log(dayofyear,c, cvalues[dayofyear]);
+
+        let color;
+        switch (c) {
+          case -1:
+            color = "var(--color-calendar-graph-day-Lm1-bg)";
+            break;
+          case -2:
+            color = "var(--color-calendar-graph-day-Lm2-bg)";
+            break;
+          case -3:
+            color = "var(--color-calendar-graph-day-Lm3-bg)";
+            break;
+          case 0:
+            color = "var(--color-calendar-graph-day-m-bg)";
+            break;
+          case 1:
+            color = "var(--color-calendar-graph-day-Lp1-bg)";
+            break;
+          case 2:
+            color = "var(--color-calendar-graph-day-Lp2-bg)";
+            break;
+          case 3:
+            color = "var(--color-calendar-graph-day-Lp3-bg)";
+            break;
+          default:
+            if (c < 0) {
+            color = "var(--color-calendar-graph-day-Lm4-bg)";
+            }else{
+            color = "var(--color-calendar-graph-day-Lp4-bg)";
+            }
+        }
+        html += `<rect class="day" width="11" height="11" x="${16 - i}" y="${j * 15}"
+        fill="${color}" onmouseover="svgTip(this, ${cvalues[dayofyear].toFixed(2)}, '${dataDate}')" onmouseleave="hideTip()"></rect>`;
+        dayofyear++;
       }
-      html += `<rect class="day" width="11" height="11" x="${16 - i}" y="${j * 15}"
-      fill="${color}" onmouseover="svgTip(this, ${c}, '${dataDate}')" onmouseleave="hideTip()"></rect>`;
+      html += '</g>';
     }
-    html += '</g>';
-  }
+    document.querySelector('#graph-svg').innerHTML = html;
+  };
+
+  // read local JSON file in javascript
+  fetch("./data.json")
+		.then( function(response){ return response.json() ;})
+		.then(function (data) {
+      // console.log(data['data_vars']['TT_TU'].data[year - 1993]);
+      console.log(year, 1993, year - 1993);
+      cvalues = data['data_vars']['TT_TU'].data[year - 1993];
+
+    graph2loop(html, cvalues, startDate, endDate);
+  });
+
   if (monthPos[1] - monthPos[0] < 2) {
     monthPos[0] = -1;
   }
@@ -338,7 +374,7 @@ style="display: none;">Thu</text>
 <text text-anchor="start" class="wday" dx="-10" dy="81"
 style="display: none;">Sat</text>
 `;
-  document.querySelector('#graph-svg').innerHTML = html;
+  document.querySelector('#graph-svg').innerHTML += html;
 }
 
 
@@ -355,9 +391,11 @@ function svgTip(elem, count, dateStr) {
   const date = new Date(dateStr);
   const dateFmt = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   if (count) {
-    svgElem.innerHTML = `<strong>${count} posts</strong> on ${dateFmt}`;
+    // svgElem.innerHTML = `<strong>${count} posts</strong> on ${dateFmt}`;
+    svgElem.innerHTML = `<strong>${count}</strong> on ${dateFmt}`;
   } else {
-    svgElem.innerHTML = `<strong>No posts</strong> on ${dateFmt}`;
+    // svgElem.innerHTML = `<strong>No posts</strong> on ${dateFmt}`;
+    svgElem.innerHTML = `<strong>No data</strong> on ${dateFmt}`;
   }
   svgElem.style.display = 'block';
   const tipRect = svgElem.getBoundingClientRect();
