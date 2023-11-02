@@ -6,35 +6,29 @@
     <description>Recent content in Posts on Takumi Matsunobu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 22 Jan 2022 15:14:07 +0100</lastBuildDate><atom:link href="https://tkmim.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Jan 2022 15:14:07 +0100</lastBuildDate>
+    <atom:link href="https://tkmim.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
       <link>https://tkmim.github.io/post/test/</link>
       <pubDate>Mon, 24 Oct 2022 22:48:40 +0200</pubDate>
-      
       <guid>https://tkmim.github.io/post/test/</guid>
       <description>1. はじめに xxxx x. Markdown CheetSheet Text Format Italic（斜体） Italic（斜体） Emphasis（強調） Emphasis（強調） Strikethrough（取</description>
     </item>
-    
     <item>
       <title>Style_changelog</title>
       <link>https://tkmim.github.io/post/style_changelog/</link>
       <pubDate>Sun, 06 Mar 2022 17:01:53 +0100</pubDate>
-      
       <guid>https://tkmim.github.io/post/style_changelog/</guid>
       <description>元祖 github-style からの変更履歴 アイコンを日替わりの identicon に設定 (6 March 2022) Publication への固定リンクをメニューに追加 (layout/partials/menu.html) (6 March 2022) ライトモード・ダークモードの切り替えトグルアイ</description>
     </item>
-    
     <item>
       <title>Publication</title>
       <link>https://tkmim.github.io/post/publication/</link>
       <pubDate>Mon, 28 Feb 2022 13:38:14 +0100</pubDate>
-      
       <guid>https://tkmim.github.io/post/publication/</guid>
-      <description>Preparation/Submitted Matsunobu, T., Puh, M., and Kei, C. (2023) Quantifying flow- and scale-dependent predictability of convective precipitation. under review
-Matsunobu, T., Quinting, J. F., Grams, C. M., and Matsueda, M. (2023) Impact of East-Asian weather patterns on regional extreme precipitation events in Japan. under review
-Peer-reviewed articles Matsunobu, T., Keil, C., and Barthlott, C. (2022) The impact of microphysical uncertainty conditional on initial and boundary condition uncertainty under varying synoptic control, Weather Clim.</description>
+      <description>In preparation/Submitted Matsunobu, T., Puh, M., and Kei, C. (2023) Quantifying flow- and scale-dependent predictability of convective precipitation. under review Peer-reviewed articles Matsunobu, T., Quinting, J. F., Grams, C. M., and Matsueda, M. (2023) Regional extreme precipitation events in wintertime Japan facilitated by East-Asian large-scale flow patterns, SOLA, 19, 253&amp;ndash;260. https://doi.org/10.2151/sola.2023-033.
+Matsunobu, T., Keil, C., and Barthlott, C. (2022) The impact of microphysical uncertainty conditional on initial and boundary condition uncertainty under varying synoptic control, Weather Clim.</description>
     </item>
-    
   </channel>
 </rss>
