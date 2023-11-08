@@ -9,6 +9,17 @@
     <lastBuildDate>Sat, 22 Jan 2022 15:14:07 +0100</lastBuildDate>
     <atom:link href="https://tkmim.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Latexdiffcite</title>
+      <link>https://tkmim.github.io/post/latexdiffcite/</link>
+      <pubDate>Wed, 08 Nov 2023 20:48:24 +0100</pubDate>
+      <guid>https://tkmim.github.io/post/latexdiffcite/</guid>
+      <description>Setting up latexdiff for trackging changes with citations latexdiffcite is a python wrapper of latexdiff, which makes a track-change tex between given two tex documents taking changes in citations into account.
+Source https://github.com/twilsonco/latexdiffcite
+https://pypi.org/project/latexdiffcite/
+Instalattion Since latexdiffcite is a simple wrapper of latexdiff, the prerequirement is of course latexdiff already installed. Upon that, the easiest way to install latexdiffcite is just using pip like:
+pip install latexdiffcite Usage If successfully installed, the one liner below immediately produces diff.</description>
+    </item>
+    <item>
       <title>Test</title>
       <link>https://tkmim.github.io/post/test/</link>
       <pubDate>Mon, 24 Oct 2022 22:48:40 +0200</pubDate>
