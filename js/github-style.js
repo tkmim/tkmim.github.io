@@ -151,7 +151,7 @@ function yearList() {
   (value, index) => start + index * step
   );
 
-  const years = arrayRange(2001, 2023, 1);
+  const years = arrayRange(2001, 2024, 1);
   years.sort((a, b) => { return b - a });
 
   for (let i = 0; i < years.length; i++) {
@@ -296,6 +296,7 @@ function graph2(year, posts, startDate, endDate) {
         }
 
         let c;
+	if (cvalues[dayofyear] == null) continue;
         // c = Math.round((Math.random() - 0.5)*10);
         c = Math.round(cvalues[dayofyear]);
         //console.log(dayofyear,c, cvalues[dayofyear]);
