@@ -151,7 +151,8 @@ function yearList() {
   (value, index) => start + index * step
   );
 
-  const years = arrayRange(2001, 2024, 1);
+  var currentYear = new Date().getFullYear();
+  const years = arrayRange(2001, currentYear + 1, 1);
   years.sort((a, b) => { return b - a });
 
   for (let i = 0; i < years.length; i++) {
