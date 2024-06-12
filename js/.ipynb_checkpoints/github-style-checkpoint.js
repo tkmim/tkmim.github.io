@@ -33,8 +33,11 @@ function switchYear(year) {
     startDate = new Date(date.getFullYear(), 0, 1);
     endDate = new Date(date.getFullYear(), 11, 31);
   } else {
-    endDate = now;
-    startDate = new Date(endDate.getTime() - 364 * 24 * 60 * 60 * 1000 - endDate.getDay() * 24 * 60 * 60 * 1000);
+    // endDate = now;
+    // startDate = new Date(endDate.getTime() - 364 * 24 * 60 * 60 * 1000 - endDate.getDay() * 24 * 60 * 60 * 1000);
+    const date = new Date(Number(year), 0, 1, 0, 0, 0, 0);
+    startDate = new Date(date.getFullYear(), 0, 1);
+    endDate = new Date(date.getFullYear(), 11, 31);
   }
   startDate.setHours(0, 0, 0, 0);
   endDate.setHours(23, 59, 59, 999);

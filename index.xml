@@ -6,8 +6,16 @@
     <description>Recent content on Takumi Matsunobu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 08 Nov 2023 20:48:24 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 2024 15:23:27 +0100</lastBuildDate>
     <atom:link href="https://tkmim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Schafkopf</title>
+      <link>https://tkmim.github.io/post/schafkopf/</link>
+      <pubDate>Mon, 01 Jan 2024 15:23:27 +0100</pubDate>
+      <guid>https://tkmim.github.io/post/schafkopf/</guid>
+      <description>Schafkopf Farbe im Karten Eichel (Kreuz, EN: Club) Gras (Pik, EN: Spade) Herz (EN: Heart) Schellen (Karo, EN:Diamond) die Reihenfolge das Ass die stärkste Karte ist, dann kommt die 10, der König, Dame/Ober, Bube/Unter, 9, 8 und die 7.
+Reference ()[https://www.sauspiel.de/schafkopf-lernen/das-schafkopf-blatt]</description>
+    </item>
     <item>
       <title>Latexdiffcite</title>
       <link>https://tkmim.github.io/post/latexdiffcite/</link>
@@ -38,8 +46,8 @@ pip install latexdiffcite Usage If successfully installed, the one liner below i
       <link>https://tkmim.github.io/post/publication/</link>
       <pubDate>Mon, 28 Feb 2022 13:38:14 +0100</pubDate>
       <guid>https://tkmim.github.io/post/publication/</guid>
-      <description>In preparation/Submitted Matsunobu, T., Puh, M., and Kei, C. (2023) Quantifying flow- and scale-dependent predictability of convective precipitation. under review Peer-reviewed articles Matsunobu, T., Quinting, J. F., Grams, C. M., and Matsueda, M. (2023) Regional extreme precipitation events in wintertime Japan facilitated by East-Asian large-scale flow patterns, SOLA, 19, 253&amp;ndash;260. https://doi.org/10.2151/sola.2023-033.
-Matsunobu, T., Keil, C., and Barthlott, C. (2022) The impact of microphysical uncertainty conditional on initial and boundary condition uncertainty under varying synoptic control, Weather Clim.</description>
+      <description>In preparation/Submitted Matsunobu, T., Keil, C. and Craig, C. G. (2024) Budget of Forecast Variability: Growth and Interaction of Uncertainties for Convective-Scale Forecasts. To be submitted. Peer-reviewed articles Matsunobu, T., Puh, M. and Keil, C. (2024) Flow- and scale-dependent spatial predictability of convective precipitation combining different model uncertainty representations, Quart. J. Roy. Meteo. Soc., 150(761), 2364‒2381. https://doi.org/10.1002/qj.4713.
+Matsunobu, T., Quinting, J. F., Grams, C. M., and Matsueda, M. (2023) Regional extreme precipitation events in wintertime Japan facilitated by East-Asian large-scale flow patterns, SOLA, 19, 253&amp;ndash;260.</description>
     </item>
     <item>
       <title>Privacy Policy</title>
