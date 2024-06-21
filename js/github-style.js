@@ -29,12 +29,16 @@ function switchYear(year) {
   let startDate;
   let endDate;
   if (year !== now.getFullYear().toString()) {
+    console.log('yeaar',year, now.getFullYear().toString())
     const date = new Date(Number(year), 0, 1, 0, 0, 0, 0);
     startDate = new Date(date.getFullYear(), 0, 1);
     endDate = new Date(date.getFullYear(), 11, 31);
   } else {
-    endDate = now;
-    startDate = new Date(endDate.getTime() - 364 * 24 * 60 * 60 * 1000 - endDate.getDay() * 24 * 60 * 60 * 1000);
+    // endDate = now;
+    // startDate = new Date(endDate.getTime() - 364 * 24 * 60 * 60 * 1000 - endDate.getDay() * 24 * 60 * 60 * 1000);
+    startDate = new Date(now.getFullYear(), 0, 1);
+    endDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 2);
+    // console.log('eeee',endDate)
   }
   startDate.setHours(0, 0, 0, 0);
   endDate.setHours(23, 59, 59, 999);
@@ -282,7 +286,7 @@ function graph2(year, posts, startDate, endDate) {
       for (let j = 0; j < 7; j++) { // days
         const date = new Date(startDate.getTime() + (i * 7 + j - weekday) * 24 * 60 * 60 * 1000);
         const dataDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
-        console.log(date.getDate())
+        // console.log(date.getDate())
         if (date < startDate || date > endDate || (date.getDate() == 29 && date.getMonth() == 1)) {
           continue;
         }
