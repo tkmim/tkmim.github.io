@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='/css/light.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://tkmim.github.io/css/syntax.css' />
-    <title>Publication - Takumi Matsunobu</title>
+    <title>Setting up a local LLM interface to assist writing - Takumi Matsunobu</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github.png'>
     
@@ -18,17 +18,21 @@
 
     
     <meta name="description"
-  content="In preparation/Submitted Matsunobu, T., Keil, C. and Craig, C. G. (2025) A Variance Budget to estimate the Growth and Interaction of Uncertainties in Convective-scale Forecasts. Submitted. Peer-reviewed articles Tintó Prims, O., Redl, R., Rautenhaus, M., Selz, T., Matsunobu, T., Modali, K. R., and Craig, G. (2024) The effect of lossy compression of numerical weather prediction data on data analysis: a case study using enstools-compression 2023.11, Geosci. Model Dev., 17, 8909–8925, https://doi." />
+  content="Local LLM as a private writing assistant (This post is written as of August 2024.)
+I just leave some notes for my experiment of setting up a local LLM that helps to improve my writing by giving internal peer-review. Though the outcome was not satisfying in my case, it showed some potentials to be usable in the not-far future.
+Conditions and goals Full text is already written in English. It should be understandable, but contains grammatical errors and could be largely improved." />
 <meta name="keywords"
   content='' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://tkmim.github.io/post/publication/" />
+<link rel="canonical" href="https://tkmim.github.io/post/local_llm/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Publication - Takumi Matsunobu" />
+<meta name="twitter:title" content="Setting up a local LLM interface to assist writing - Takumi Matsunobu" />
 <meta name="twitter:description"
-  content="In preparation/Submitted Matsunobu, T., Keil, C. and Craig, C. G. (2025) A Variance Budget to estimate the Growth and Interaction of Uncertainties in Convective-scale Forecasts. Submitted. Peer-reviewed articles Tintó Prims, O., Redl, R., Rautenhaus, M., Selz, T., Matsunobu, T., Modali, K. R., and Craig, G. (2024) The effect of lossy compression of numerical weather prediction data on data analysis: a case study using enstools-compression 2023.11, Geosci. Model Dev., 17, 8909–8925, https://doi." />
+  content="Local LLM as a private writing assistant (This post is written as of August 2024.)
+I just leave some notes for my experiment of setting up a local LLM that helps to improve my writing by giving internal peer-review. Though the outcome was not satisfying in my case, it showed some potentials to be usable in the not-far future.
+Conditions and goals Full text is already written in English. It should be understandable, but contains grammatical errors and could be largely improved." />
 <meta name="twitter:site" content="https://tkmim.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,17 +40,19 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Publication - Takumi Matsunobu">
+<meta property="og:title" content="Setting up a local LLM interface to assist writing - Takumi Matsunobu">
 <meta property="og:description"
-  content="In preparation/Submitted Matsunobu, T., Keil, C. and Craig, C. G. (2025) A Variance Budget to estimate the Growth and Interaction of Uncertainties in Convective-scale Forecasts. Submitted. Peer-reviewed articles Tintó Prims, O., Redl, R., Rautenhaus, M., Selz, T., Matsunobu, T., Modali, K. R., and Craig, G. (2024) The effect of lossy compression of numerical weather prediction data on data analysis: a case study using enstools-compression 2023.11, Geosci. Model Dev., 17, 8909–8925, https://doi." />
-<meta property="og:url" content="https://tkmim.github.io/post/publication/" />
-<meta property="og:site_name" content="Publication" />
+  content="Local LLM as a private writing assistant (This post is written as of August 2024.)
+I just leave some notes for my experiment of setting up a local LLM that helps to improve my writing by giving internal peer-review. Though the outcome was not satisfying in my case, it showed some potentials to be usable in the not-far future.
+Conditions and goals Full text is already written in English. It should be understandable, but contains grammatical errors and could be largely improved." />
+<meta property="og:url" content="https://tkmim.github.io/post/local_llm/" />
+<meta property="og:site_name" content="Setting up a local LLM interface to assist writing" />
 <meta property="og:image"
   content="https://tkmim.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2022-02-28 13:38:14 &#43;0100 CET" />
+<meta property="article:published_time" content="2024-08-13 14:43:25 &#43;0200 CEST" />
 
 
 
@@ -122,18 +128,18 @@
                   <span class="author">
                     <a href="https://tkmim.github.io/">Takumi Matsunobu</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://tkmim.github.io/post/publication/">Publication</a></strong>
+                      href="https://tkmim.github.io/post/local_llm/">Setting up a local LLM interface to assist writing</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Mon, 28 Feb 2022 13:38:14 &#43;0100"
+                  Created <relative-time datetime="Tue, 13 Aug 2024 14:43:25 &#43;0200"
                     class="no-wrap">
-                    Mon, 28 Feb 2022 13:38:14 &#43;0100</relative-time>
+                    Tue, 13 Aug 2024 14:43:25 &#43;0200</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Thu, 06 Feb 2025 16:04:12 &#43;0100"
+                  Modified <relative-time datetime="Tue, 20 Aug 2024 12:11:11 &#43;0200"
                     class="no-wrap">
-                    Thu, 06 Feb 2025 16:04:12 &#43;0100</relative-time>
+                    Tue, 20 Aug 2024 12:11:11 &#43;0200</relative-time>
                   
                 </div>
               </div>
@@ -157,11 +163,31 @@
                         <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
                       </svg>
                     </summary>
-                          469 Words
+                          302 Words
                     
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      
+                    </a>
+                    
                     
                   </div>
                 </div>
@@ -169,54 +195,32 @@
 
 
               <div class="Box-body px-5 pb-5">
-                <article class="markdown-body entry-content container-lg"><h2 id="in-preparationsubmitted">In preparation/Submitted</h2>
+                <article class="markdown-body entry-content container-lg"><h1 id="local-llm-as-a-private-writing-assistant">Local LLM as a private writing assistant</h1>
+<p>(This post is written as of August 2024.)</p>
+<p>I just leave some notes for my experiment of setting up a local LLM that helps to improve my writing by giving internal peer-review. Though the outcome was not satisfying in my case, it showed some potentials to be usable in the not-far future.</p>
+<h2 id="conditions-and-goals">Conditions and goals</h2>
 <ul>
-<li><strong><em>Matsunobu, T.</em></strong>,  Keil, C. and Craig, C. G. (2025) A Variance Budget to estimate the Growth and Interaction of  Uncertainties in Convective-scale Forecasts. <em>Submitted.</em></li>
+<li>Full text is already written in English. It should be understandable, but contains grammatical errors and could be largely improved.</li>
+<li>Sufficient scientific discussions are included, but formulations of them are sometimes not clear.</li>
+<li>The author tends to write lengthy and indirect sentences and paragraphs. Squeezing those blocks contributes to better readability.</li>
+<li>Available GPU is for home-use or office-use with its memory up to 16 GB.</li>
 </ul>
-<h1 id="peer-reviewed-articles">Peer-reviewed articles</h1>
+<ol>
+<li>A LLM gives review comments on the entire manuscript like a proper peer-review, but only about language and style improvements.</li>
+<li>Suggest better formulation of an entire section or subsection, including a change in the strusture and the order of paragraphs.</li>
+<li>Suggest grammatical corrections and reformulations without violating the content.</li>
+</ol>
+<h2 id="conclusions">Conclusions</h2>
 <ul>
-<li>
-<p>Tintó Prims, O., Redl, R., Rautenhaus, M., Selz, T., <strong><em>Matsunobu, T.</em></strong>, Modali, K. R., and Craig, G. (2024) The effect of lossy compression of numerical weather prediction data on data analysis: a case study using enstools-compression 2023.11, <em>Geosci. Model Dev.</em>, <strong>17</strong>, 8909–8925, <a href="https://doi.org/10.5194/gmd-17-8909-2024">https://doi.org/10.5194/gmd-17-8909-2024</a>.</p>
-</li>
-<li>
-<p><strong><em>Matsunobu, T.</em></strong>, Puh, M. and Keil, C. (2024) Flow- and scale-dependent spatial predictability of convective precipitation combining different model uncertainty representations, <em>Quart. J. Roy. Meteo. Soc.</em>, <strong>150(761)</strong>, 2364‒2381. <a href="https://doi.org/10.1002/qj.4713">https://doi.org/10.1002/qj.4713</a>.</p>
-</li>
-<li>
-<p><strong><em>Matsunobu, T.</em></strong>, Quinting, J. F., Grams, C. M., and Matsueda, M. (2023) Regional extreme precipitation events in wintertime Japan facilitated by East-Asian large-scale flow patterns, <em>SOLA</em>, <strong>19</strong>, 253&ndash;260. <a href="https://doi.org/10.2151/sola.2023-033">https://doi.org/10.2151/sola.2023-033</a>.</p>
-</li>
-<li>
-<p><strong><em>Matsunobu, T.</em></strong>, Keil, C., and Barthlott, C. (2022) The impact of microphysical uncertainty conditional on initial and boundary condition uncertainty under varying synoptic control, <em>Weather Clim. Dynam.</em>, <strong>3</strong>(4), 1273–1289. <a href="https://doi.org/10.5194/wcd-3-1273-2022">https://doi.org/10.5194/wcd-3-1273-2022</a>.</p>
-</li>
-<li>
-<p>Barthlott, C., Zarboo, A., <strong><em>Matsunobu, T.</em></strong>, and Keil, C. (2022) Impacts of combined microphysical and land-surface uncertainties on convective clouds and precipitation in different weather regimes. <em>Atmos. Chem. Phys.</em>, <strong>22</strong>(16), 10841–10860. <a href="https://doi.org/10.5194/acp-22-10841-2022">https://doi.org/10.5194/acp-22-10841-2022</a>.</p>
-</li>
-<li>
-<p>Magnusson, L., Ackerley, D., Bouteloup, Y., Chen, J.-H., Doyle, J., Earnshaw, P., Kwon, Y. C., Köhler, M., Lang, S. T. K., Lim, Y.-J., Matsueda, M., <strong><em>Matsunobu, T.</em></strong>, McTaggart-Cowan, R., Reinecke, A., Yamaguchi, M., and Zhou, L. (2022). Skill of Medium-Range Forecast Models Using the Same Initial Conditions. <em>Bull. Amer. Meteor. Soc.</em>, <strong>103</strong>(9), E2050-E2068. <a href="https://doi.org/10.1175/BAMS-D-21-0234.1">https://doi.org/10.1175/BAMS-D-21-0234.1</a>.</p>
-</li>
-<li>
-<p>Barthlott, C., Zarboo, A., <strong><em>Matsunobu, T.</em></strong>, and Keil, C. (2022) Importance of aerosols and shape of the cloud droplet size distribution for convective clouds and precipitation. <em>Atmos. Chem. Phys.</em>, <strong>22</strong>(3), 2153–2172. <a href="https://doi.org/10.5194/acp-22-2153-2022">https://doi.org/10.5194/acp-22-2153-2022</a>.</p>
-</li>
-<li>
-<p>Saito, K., <strong><em>Matsunobu, T.</em></strong>, and Oizumi, T. (2022) Effect of Upper-Air Moistening by Northward Ageostrophic Winds Associated with a Tropical Cyclone on the PRE Enhancement. <em>SOLA</em>, <strong>18</strong>, 81-87. <a href="https://doi.org/10.2151/sola.2022-014">https://doi.org/10.2151/sola.2022-014</a>.</p>
-</li>
-<li>
-<p>Saito, K., and <strong><em>Matsunobu, T.</em></strong> (2020) Northward Ageostrophic Winds Associated with a Tropical Cyclone. Part 2: Moisture Transport and Its Impact on PRE, <em>SOLA</em>, <strong>16</strong>, 198-205. <a href="https://doi.org/10.2151/sola.2020-034">https://doi.org/10.2151/sola.2020-034</a>.</p>
-</li>
-<li>
-<p><strong><em>Matsunobu, T.</em></strong>, and Tanaka, H. L. (2019) Time series analysis of normal mode energetics for Rossby wave breaking and saturation using a simple barotropic model. <em>Atmo. Sci. Lett.</em>, <strong>20(11)</strong>, e940. <a href="https://doi.org/10.1002/ASL.940">https://doi.org/10.1002/ASL.940</a>.</p>
-</li>
-<li>
-<p><strong><em>Matsunobu, T.</em></strong>, and Matsueda, M. (2019) Assessing the Predictability of Heavy Rainfall Events in Japan in Early July 2018 on Medium-Range Timescales. <em>SOLA</em>, <strong>15A</strong>, 19–24. <a href="https://doi.org/10.2151/sola.15A-004">https://doi.org/10.2151/sola.15A-004</a>.</p>
-</li>
+<li>Small LLMs that are able to run on an office-use GPU (with 16GB memory) do not provide nice review, but are available for corecting grammatical errors paragraph by paragraph.</li>
+<li>Their context window is too small to even store one subsection. A single paragraph would be a largest block as input.</li>
+<li>Feeding PDF was not working nicely as expected. Encoding or emmbedding PDF seems not perfect yet.</li>
 </ul>
-<h1 id="other-publications">Other publications</h1>
+<h2 id="some-results">Some results</h2>
 <ul>
-<li>
-<p><strong><em>Matsunobu, T.</em></strong>, and Matsueda, M. (2022) Medium-range forecast skill of various operational NWP models for the July 2018 severe rainfall event in Japan. In: <em>Meteorological Research Note Vol. 246</em> (ed. H. Endo, H. Nakamura, Y. Tachibana), 107&ndash;116, Meteorological society of Japan (in Japanese).</p>
-</li>
-<li>
-<p>Saito, K., Duc, L., <strong><em>Matsunobu, T.</em></strong>, and Kurihana, T. (2022) Perturbations by the Ensemble Transform. In: <em>Data Assimilation for Atmospheric, Oceanic and hydrologic Appplications (Vol. IV)</em> (ed. S. K. Park, L. Xu), 115&ndash;141, Springer.</p>
-</li>
+<li>The context is not recognised at all. The models print an original abstract of a document that is missing its abstract. It seemed like a copy from a paper using data from NOAA, from which I has never used any data in my study.</li>
+<li>Their output tends to be hyperbolic and to use bullet points for everything.</li>
+<li></li>
 </ul>
 </article>
               </div>
@@ -242,7 +246,7 @@
 
  const tippyInstance = tippy('#toc-toggle', {
   trigger: 'click',
-  content: '<div id="table-of-contents">\u003cnav id=\u0022TableOfContents\u0022\u003e\n  \u003cul\u003e\n    \u003cli\u003e\u003ca href=\u0022#in-preparationsubmitted\u0022\u003eIn preparation\/Submitted\u003c\/a\u003e\u003c\/li\u003e\n  \u003c\/ul\u003e\n\u003c\/nav\u003e</div>',
+  content: '<div id="table-of-contents">\u003cnav id=\u0022TableOfContents\u0022\u003e\n  \u003cul\u003e\n    \u003cli\u003e\u003ca href=\u0022#conditions-and-goals\u0022\u003eConditions and goals\u003c\/a\u003e\u003c\/li\u003e\n    \u003cli\u003e\u003ca href=\u0022#conclusions\u0022\u003eConclusions\u003c\/a\u003e\u003c\/li\u003e\n    \u003cli\u003e\u003ca href=\u0022#some-results\u0022\u003eSome results\u003c\/a\u003e\u003c\/li\u003e\n  \u003c\/ul\u003e\n\u003c\/nav\u003e</div>',
   allowHTML: true,
   placement: 'bottom-start',
   interactive: true,
@@ -317,6 +321,14 @@
 </body>
 
 <script type="application/javascript" src="/js/github-style.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
 
 

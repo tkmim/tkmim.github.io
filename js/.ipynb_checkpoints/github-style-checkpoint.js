@@ -29,15 +29,15 @@ function switchYear(year) {
   let startDate;
   let endDate;
   if (year !== now.getFullYear().toString()) {
+    console.log('yeaar',year, now.getFullYear().toString())
     const date = new Date(Number(year), 0, 1, 0, 0, 0, 0);
     startDate = new Date(date.getFullYear(), 0, 1);
     endDate = new Date(date.getFullYear(), 11, 31);
   } else {
     // endDate = now;
     // startDate = new Date(endDate.getTime() - 364 * 24 * 60 * 60 * 1000 - endDate.getDay() * 24 * 60 * 60 * 1000);
-    const date = new Date(Number(year), 0, 1, 0, 0, 0, 0);
     startDate = new Date(date.getFullYear(), 0, 1);
-    endDate = new Date(date.getFullYear(), 11, 31);
+    endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - 2);
   }
   startDate.setHours(0, 0, 0, 0);
   endDate.setHours(23, 59, 59, 999);
@@ -154,7 +154,8 @@ function yearList() {
   (value, index) => start + index * step
   );
 
-  const years = arrayRange(2001, 2024, 1);
+  var currentYear = new Date().getFullYear();
+  const years = arrayRange(2001, currentYear + 1, 1);
   years.sort((a, b) => { return b - a });
 
   for (let i = 0; i < years.length; i++) {
