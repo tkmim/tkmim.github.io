@@ -1,0 +1,146 @@
+/*-- scss:rules --*/
+/*
+#quarto-document-content {
+  width: 2000px;
+} */
+
+/*
+.grid {
+  width: 1300px !important;
+} */
+
+.readme {
+  /* background-color: #f6f8fa !important; Set your desired background color */
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #d1d5da !important;
+  padding: 1.6em !important;
+  border-radius: 6px !important;
+  font-size: 0.8em !important;
+  max-width: 896px;
+}
+
+.calendar-graph {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #d1d5da !important;
+  padding: 1.6em !important;
+  border-radius: 6px !important;
+  font-size: 0.8em !important;
+  max-width: 896px;
+}
+
+.index-left {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 1em;
+}
+
+.index-right {
+  flex-basis: 0;
+  flex-grow: 1;
+  border-left: solid 1px #d1d5da;
+  padding-left: 1.5em;
+}
+
+:root {
+  --color-calendar-graph-day-bg: #ebedf0;
+  --color-calendar-graph-day-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-halloween-graph-day-L1-bg: #ffee4a;
+  --color-calendar-halloween-graph-day-L2-bg: #ffc501;
+  --color-calendar-halloween-graph-day-L3-bg: #fe9600;
+  --color-calendar-halloween-graph-day-L4-bg: #03001c;
+
+  --color-calendar-graph-day-Lm1-bg: #a5e7ff;
+  --color-calendar-graph-day-Lm1-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lm2-bg: #63a9f9;
+  --color-calendar-graph-day-Lm2-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lm3-bg: #006bbc;
+  --color-calendar-graph-day-Lm3-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lm4-bg: #003582;
+  --color-calendar-graph-day-Lm4-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp1-bg: #f0dfcf;
+  --color-calendar-graph-day-Lp1-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp2-bg: #f0ab9e;
+  --color-calendar-graph-day-Lp2-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp3-bg: #ef776f;
+  --color-calendar-graph-day-Lp3-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-Lp4-bg: #ee4044;
+  --color-calendar-graph-day-Lp4-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-m-bg: #d2d2d4; /*ababae*/
+  --color-calendar-graph-day-m-border: rgba(27, 31, 35, 0.06);
+  --color-calendar-graph-day-nan-bg: #ffffff;
+  --color-calendar-graph-day-nan-border: rgba(27, 31, 35, 0.06);
+}
+
+.calendar-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.calendar-preset-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.calendar-preset-list .btn {
+  border-radius: 999px;
+  padding-inline: 0.9rem;
+}
+
+.calendar-title {
+  line-height: 1.2;
+}
+
+.calendar-year-list {
+  width: min(100%, 51.75rem);
+  margin-top: 1rem;
+}
+
+.calendar-year-row {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(3.75rem, 1fr));
+  gap: 0.35rem;
+}
+
+.calendar-year-row + .calendar-year-row {
+  margin-top: 0.35rem;
+}
+
+.calendar-year-button {
+  min-width: 0;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  padding: 0.28rem 0.4rem;
+  font: inherit;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.calendar-year-button:hover,
+.calendar-year-button:focus-visible {
+  border-color: #6c757d;
+  background: #f1f3f5;
+}
+
+.calendar-year-button:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 1px;
+}
+
+.calendar-year-button.selected {
+  border-color: #212529;
+  background: #212529;
+  color: #fff;
+  font-weight: 600;
+}
